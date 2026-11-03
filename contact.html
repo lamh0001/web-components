@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Brahim Design</title>
+</head>
+<body>
+
+    <a href="#main">Skip to main content</a>
+
+    <header>
+        <h1>Brahim Design</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section>
+            <h2>Contact Me</h2>
+            <p>Do you have a question or want to work together?
+               Fill out the form below to get in touch.</p>
+
+            <form action="result.html" method="post">
+
+                <div>
+                    <label for="fname">Full Name:</label>
+                    <input type="text" id="fname" name="fullname" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject">
+                        <option value="">Select a subject</option>
+                        <option value="project">Project Inquiry</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" cols="40"></textarea>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend>Preferred Contact Method</legend>
+
+                        <label for="contact-email">Email</label>
+                        <input type="radio" id="contact-email"
+                               name="contactmethod" value="email" checked>
+
+                        <label for="contact-phone">Phone</label>
+                        <input type="radio" id="contact-phone"
+                               name="contactmethod" value="phone">
+                    </fieldset>
+                </div>
+
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>My Availability</h2>
+            <p>Here is my general availability for
+               project inquiries and collaborations.</p>
+
+            <table>
+                <caption>Weekly Contact Availability</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Morning</th>
+                        <th scope="col">Afternoon</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Monday</th>
+                        <td>Available</td>
+                        <td>Available</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Tuesday</th>
+                        <td>Available</td>
+                        <td>Unavailable</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td>Unavailable</td>
+                        <td>Available</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Thursday</th>
+                        <td colspan="2">Unavailable All Day</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Friday</th>
+                        <td>Available</td>
+                        <td>Available</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total Available Periods</th>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brahim Design</p>
+    </footer>
+
+</body>
+</html>
