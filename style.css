@@ -200,20 +200,71 @@ footer p {
     margin-bottom: 0;
 }
 
+
+/* =========================
+   9. ACCESSIBILITY
+========================= */
+
+/* Keyboard focus */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid #ad3b00;
-    outline-offset: 3px;
+    outline: 0.1875rem solid #ad3b00;
+    outline-offset: 0.1875rem;
 }
 
-body > a[href="#main"] {
-    display: inline-block;
-    padding: 0.75rem;
+/* White focus outline on dark navigation */
+
+nav a:focus-visible {
+    outline: 0.1875rem solid #ffffff;
+    outline-offset: 0.1875rem;
+    background-color: #155a92;
+}
+
+/* Visually hidden content */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* This will show the skip link when the link is focused */
+
+.skip-link:focus-visible {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
     background-color: #ffffff;
-    color: #155a92;
+    color: #1c2a3a;
+    outline: 0.1875rem solid #ad3b00;
+    outline-offset: 0.1875rem;
+    z-index: 1000;
+}
+
+/* This will Prevent long content from overflowing and make the overall layout more responsive */
+
+main,
+section,
+article {
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 .page-home main {
@@ -263,5 +314,18 @@ body > a[href="#main"] {
 
     .page-home main > section:nth-child(2) article {
         margin-bottom: 0;
+    }
+}
+
+/* reduced-motion guard block*/
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
